@@ -1,34 +1,33 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import hsr_logo from './assets/hsr_logo.png'
+import poopmap_img from './assets/poopmap_img.png'
+import itc from './assets/itc.png'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
+    <div>
       <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
+      <a href="https://hsr.hoyoverse.com/en-us/" target="_blank">
+          <img src={hsr_logo} className="logo react" alt="React logo" />
         </a>
       </div>
-      <h1>Vite + React</h1>
+      <h1>The Nameless</h1>
+      <h2>Past Projects</h2>
+        <a href="https://github.com/christopherjlo/CPP-Poop-Map" target="_blank">PoopMap</a>
+        <br></br>
+        <img id="hi" src={poopmap_img}></img>
+        <br></br>
+        <a href="https://github.com/The-The-ITC-2023/Roommate-Finder-Application" target="_blank">Roommate Finder</a>
+        <br></br>
+        <img id="hi" src={itc}></img>
+
       <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
       </div>
       <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
+      <a href="https://docs.google.com/document/d/1xMEFJQjbSX-atfuir_cXXS8ycZIpC1TAxNxTOi4zjus/edit?usp=drive_web&ouid=113272704952034982292">
+        Meeting Logs</a>
       </p>
-    </>
+    </div>
   )
 }
 
