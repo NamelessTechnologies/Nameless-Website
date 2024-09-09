@@ -1,33 +1,21 @@
-import hsr_logo from './assets/hsr_logo.png'
-import poopmap_img from './assets/poopmap_img.png'
-import itc from './assets/itc.png'
-import './App.css'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Home from './pages/Home.tsx';
+import Logs from './pages/Logs.tsx';
+import Projects from './pages/Projects.tsx';
+import Contact from './pages/Contact.tsx';
+import { NavBar } from './components/Navbar';
 
 function App() {
   return (
-    <div>
-      <div>
-      <a href="https://hsr.hoyoverse.com/en-us/" target="_blank">
-          <img src={hsr_logo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>The Nameless</h1>
-      <h2>Past Projects</h2>
-        <a href="https://github.com/christopherjlo/CPP-Poop-Map" target="_blank">PoopMap</a>
-        <br></br>
-        <img id="hi" src={poopmap_img}></img>
-        <br></br>
-        <a href="https://github.com/The-The-ITC-2023/Roommate-Finder-Application" target="_blank">Roommate Finder</a>
-        <br></br>
-        <img id="hi" src={itc}></img>
-
-      <div className="card">
-      </div>
-      <p className="read-the-docs">
-      <a href="https://docs.google.com/document/d/1xMEFJQjbSX-atfuir_cXXS8ycZIpC1TAxNxTOi4zjus/edit?usp=drive_web&ouid=113272704952034982292">
-        Meeting Logs</a>
-      </p>
-    </div>
+    <Router>
+        <NavBar/>
+        <Routes>
+            <Route path="/" element={<Home/>} />
+            <Route path="/Logs" element={<Logs/>} />
+            <Route path="/Projects" element={<Projects/>} />
+            <Route path="/Contact" element={<Contact/>} />
+        </Routes>
+    </Router>
   )
 }
 
